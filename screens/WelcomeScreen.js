@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView, KeyboardAvoidingView} from 'react-native';
 import Modal from 'react-native-modal'
+import { RFValue } from "react-native-responsive-fontsize";
 import db from '../config'
 import firebase from 'firebase'
 
