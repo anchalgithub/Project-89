@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView, KeyboardAvoidingView, FlatList} from 'react-native';
 import {Card, Header, Icon} from 'react-native-elements';
+import { RFValue } from "react-native-responsive-fontsize";
 import firebase from 'firebase';
 import db from '../config';
 
