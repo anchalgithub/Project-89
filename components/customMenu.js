@@ -4,6 +4,7 @@ import {DrawerItems} from 'react-navigation-drawer';
 import firebase from 'firebase';
 import { Avatar } from "react-native-elements";
 import * as ImagePicker from "expo-image-picker";
+import { RFValue } from "react-native-responsive-fontsize";
 import db from '../config'
 
 export default class customMenu extends Component {
@@ -61,14 +62,14 @@ selectPicture = async () => {
   };
 
   getUserProfile() {
-    db.collection("users")
-      .where("email_id", "==", this.state.userId)
+   db.collection("users")
+    .where("email_id", "==", this.state.userId)
       .onSnapshot((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          this.setState({
-            name: doc.data().first_name + " " + doc.data().last_name,
-            docId: doc.id,
-            image: doc.data().image,
+       querySnapshot.forEach((doc) => {
+        this.setState({
+        name: doc.data().first_name + " " + doc.data().last_name,
+          docId: doc.id,
+         image: doc.data().image,
           });
         });
       });
